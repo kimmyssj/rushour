@@ -6,7 +6,7 @@
 /*   By: seungjki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 17:34:18 by seungjki          #+#    #+#             */
-/*   Updated: 2022/04/16 19:38:16 by seungjki         ###   ########.fr       */
+/*   Updated: 2022/04/16 19:44:07 by seungjki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putchar(char c);
 
-void	hori_print1(int x, int y)
+void	hori_print1(int x)
 {
 	int	hori;
 
@@ -29,8 +29,7 @@ void	hori_print1(int x, int y)
 			ft_putchar('C');
 		hori ++;
 	}
-	if (y != 1)
-		ft_putchar('\n');
+	ft_putchar('\n');
 }
 
 void	hori_print2(int x)
@@ -74,7 +73,7 @@ void	rush(int x, int y)
 	while (verti < y)
 	{
 		if (verti == 0)
-			hori_print1(x, y);
+			hori_print1(x);
 		else if (verti != 0 && verti != (y - 1))
 			hori_print2(x);
 		else if (verti == (y - 1))
