@@ -6,7 +6,7 @@
 /*   By: seungjki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 17:34:18 by seungjki          #+#    #+#             */
-/*   Updated: 2022/04/16 18:04:42 by seungjki         ###   ########.fr       */
+/*   Updated: 2022/04/16 19:38:16 by seungjki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@ void	hori_print1(int x, int y)
 	while (hori < x)
 	{
 		if (hori == 0)
-			write(1, "A", 1);
+			ft_putchar('A');
 		if (hori > 0 && hori < (x - 1))
-			write(1, "B", 1);
+			ft_putchar('B');
 		if (hori == (x - 1) && hori != 0)
-			write(1, "C", 1);
+			ft_putchar('C');
 		hori ++;
 	}
 	if (y != 1)
-		write(1, "\n", 1);
+		ft_putchar('\n');
 }
 
 void	hori_print2(int x)
@@ -41,12 +41,12 @@ void	hori_print2(int x)
 	while (hori < x)
 	{
 		if (hori == 0 || hori == (x - 1))
-			write(1, "B", 1);
+			ft_putchar('B');
 		else
-			write(1, " ", 1);
+			ft_putchar(' ');
 		hori ++;
 	}
-	write(1, "\n", 1);
+	ft_putchar('\n');
 }
 
 void	hori_print3(int x)
@@ -57,11 +57,11 @@ void	hori_print3(int x)
 	while (hori < x)
 	{
 		if (hori == 0)
-			write(1, "C", 1);
+			ft_putchar('C');
 		if (hori > 0 && hori < (x - 1))
-			write(1, "B", 1);
+			ft_putchar('B');
 		if (hori == (x - 1) && hori != 0)
-			write(1, "A", 1);
+			ft_putchar('A');
 		hori ++;
 	}
 }
